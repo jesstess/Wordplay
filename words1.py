@@ -1,6 +1,6 @@
-from scrabble import wordlist
+import scrabble
 
 # Print all words containing 'uu'.
-for word in wordlist:
+for word in scrabble.wordlist:
     if 'uu' in word:
         print word
