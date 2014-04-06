@@ -5,4 +5,4 @@ import scrabble
 pattern = re.compile("uu")
 for word in scrabble.wordlist:
     if pattern.search(word):
-        print word
+        print(word)

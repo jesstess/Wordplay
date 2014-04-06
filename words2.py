@@ -9,4 +9,4 @@ for letter in string.ascii_lowercase:
             exists = True
             break
     if not exists:
-        print "There are no English words with a double " + letter
+        print("There are no English words with a double " + letter)

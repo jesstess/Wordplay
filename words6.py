@@ -6,4 +6,4 @@ import scrabble
 pattern = re.compile("^e.g....r$")
 for word in scrabble.wordlist:
     if pattern.search(word):
-        print word
+        print(word)

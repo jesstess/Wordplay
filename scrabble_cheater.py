@@ -1,15 +1,15 @@
 import sys
-from scrabble import wordlist, scores
+import scrabble
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print >>sys.stderr, "Usage: scrabble.py [RACK]"
+        print("Usage: scrabble.py [RACK]")
         sys.exit(1)
 
     rack = list(sys.argv[1].lower())
     valid_words = []
 
-    for word in wordlist:
+    for word in scrabble.wordlist:
         # Make a copy of the rack for every new word, so we can manipulate it
         # without compromising the original rack.
         available_letters = rack[:]
@@ -25,8 +25,8 @@ if __name__ == "__main__":
             # Calculate the Scrabble score.
             score = 0
             for letter in word:
-                score = score + scores[letter]
+                score = score + scrabble.scores[letter]
             valid_words.append((score, word))
 
     for play in sorted(valid_words, reverse=True):
-        print play[0], play[1]
+        print(str(play[0]), play[1])
