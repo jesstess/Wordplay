@@ -29,4 +29,4 @@ if __name__ == "__main__":
             valid_words.append((score, word))
 
     for play in sorted(valid_words, reverse=True):
-        print(str(play[0]), play[1])
+        print("%d %s" % (play[0], play[1]))
